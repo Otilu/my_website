@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Kakwara Hospital</title>
+  <link rel="stylesheet" href={~p"/assets/login.css"}>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .about-card {
+      background: #fff;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+    .about-card h2 {
+      color: #005b96;
+      margin-bottom: 1.2rem;
+      text-align: center;
+    }
+    .about-card p {
+      color: #333;
+      margin-bottom: 1.2rem;
+      line-height: 1.7;
+      font-size: 1.08rem;
+    }
+    .about-values {
+      margin: 1.5rem 0;
+      padding: 0;
+      list-style: none;
+    }
+    .about-values li {
+      margin-bottom: 0.7rem;
+      color: #005b96;
+      font-weight: 600;
+    }
+    .about-contact {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .about-contact a {
+      color: #005b96;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .about-contact a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="about-card">
+      <h2><i class="fa-solid fa-circle-info"></i> About Kakwara Hospital</h2>
+      <p>
+        <strong>Kakwara Hospital</strong> is dedicated to providing compassionate, high-quality healthcare to our community. 
+        Our team of experienced professionals is committed to ensuring every patient receives personalized care in a safe and welcoming environment.
+      </p>
+      <p>
+        We offer a wide range of medical services, from emergency care to specialized treatments, using modern technology and evidence-based practices. 
+        Our mission is to improve the health and well-being of all those we serve.
+      </p>
+      <ul class="about-values">
+        <li><i class="fa-solid fa-heart-pulse"></i> Compassionate Care</li>
+        <li><i class="fa-solid fa-user-doctor"></i> Experienced Medical Team</li>
+        <li><i class="fa-solid fa-hospital"></i> Modern Facilities</li>
+        <li><i class="fa-solid fa-hand-holding-medical"></i> Community Focused</li>
+        <li><i class="fa-solid fa-clock"></i> 24/7 Emergency Services</li>
+      </ul>
+      <div class="about-contact">
+        <p>Want to know more? <a href={~p"/contact"}><i class="fa-solid fa-envelope"></i> Contact Us</a></p>
+        <p>Need assistance? Call us at <a href="tel:+1234567890"><i class="fa-solid fa-phone"></i> +1 234 567 890</a></p>
+      </div>
+      <div class="about-home">
+        <p>Return to the main page:</p>
+        <br>
+
+        <a href={~p"/main"}><i class="fa-solid fa-house"></i> Home</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

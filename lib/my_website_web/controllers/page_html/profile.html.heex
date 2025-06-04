@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile | Kakwara Hospital</title>
+  <link rel="stylesheet" href={~p"/assets/login.css"}>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .profile-card {
+      background: #fff;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 400px;
+      margin: 2rem auto;
+      text-align: center;
+    }
+    .profile-avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: #e3eaf6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.2rem auto;
+      font-size: 2.5rem;
+      color: #005b96;
+    }
+    .profile-info {
+      margin-bottom: 1.5rem;
+    }
+    .profile-info h2 {
+      margin: 0.5rem 0 0.2rem 0;
+      color: #005b96;
+    }
+    .profile-info p {
+      margin: 0.2rem 0;
+      color: #333;
+      font-size: 1.05rem;
+    }
+    .profile-actions {
+      margin-top: 1.5rem;
+    }
+    .profile-actions a {
+      display: inline-block;
+      margin: 0 0.5rem;
+      padding: 0.5rem 1.2rem;
+      background: #005b96;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .profile-actions a:hover {
+      background: #003f6b;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="profile-card">
+      <div class="profile-avatar">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <div class="profile-info">
+        <h2>John Doe</h2>
+        <p><i class="fa-solid fa-envelope"></i> johndoe@email.com</p>
+        <p><i class="fa-solid fa-phone"></i> +254 700 000000</p>
+      </div>
+      <div class="profile-actions">
+        <a href={~p"/settings"}><i class="fa-solid fa-gear"></i> Edit Profile</a>
+        <a href={~p"/logout"}><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

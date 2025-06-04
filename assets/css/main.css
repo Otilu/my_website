@@ -1,0 +1,127 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f5f8fa;
+  margin: 0;
+  color: #222;
+}
+
+a {
+  color: #005b96;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #003f6b;
+  text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+  background: #005b96;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar h1 {
+  margin: 0;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #e3eaf6;
+  padding: 1.5rem 1rem;
+  min-width: 200px;
+}
+.sidebar-item {
+  margin-bottom: 1.2rem;
+}
+.sidebar-item a {
+  color: #005b96;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.sidebar-item a:hover {
+  color: #003f6b;
+}
+.sidebar-icon {
+  margin-right: 0.7rem;
+}
+
+/* Main content */
+.content {
+  padding: 2rem;
+}
+
+/* Cards (for help, contact, about, etc.) */
+.login-container, .help-card, .contact-card, .about-card, .settings-card, .blog-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  margin: 2rem auto;
+  max-width: 500px;
+  padding: 2rem 2.5rem;
+}
+
+/* Buttons */
+button, .contact-btn, .settings-btn, .home-link, .back-main-btn {
+  background: #005b96;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.4rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover, .contact-btn:hover, .settings-btn:hover, .home-link:hover, .back-main-btn:hover {
+  background: #003f6b;
+  color: #ffeb3b;
+}
+
+/* Forms */
+input, textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #b3c6e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+/* Footer */
+.footer {
+  background: #005b96;
+  color: #fff;
+  padding: 1.5rem 0 0.7rem 0;
+  text-align: center;
+  margin-top: 3rem;
+}
+.footer a {
+  color: #ffeb3b;
+}
+.footer a:hover {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .login-container, .help-card, .contact-card, .about-card, .settings-card, .blog-card {
+    max-width: 98vw;
+    padding: 1rem 0.5rem;
+  }
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .sidebar {
+    min-width: 120px;
+    padding: 1rem 0.5rem;
+  }
+}

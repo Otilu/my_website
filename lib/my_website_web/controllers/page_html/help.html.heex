@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Help | Kakwara Hospital</title>
+  <link rel="stylesheet" href={~p"/assets/login.css"}>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .help-card {
+      background: #fff;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: 500px;
+      margin: 2rem auto;
+    }
+    .help-card h2 {
+      color: #005b96;
+      margin-bottom: 1.2rem;
+      text-align: center;
+    }
+    .faq-list {
+      margin: 1.5rem 0;
+      padding: 0;
+      list-style: none;
+    }
+    .faq-list li {
+      margin-bottom: 1.2rem;
+    }
+    .faq-q {
+      font-weight: bold;
+      color: #005b96;
+      margin-bottom: 0.2rem;
+      display: block;
+    }
+    .faq-a {
+      color: #333;
+      margin-left: 1rem;
+    }
+    .help-contact {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .help-contact a {
+      color: #005b96;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .help-contact a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="help-card">
+      <h2><i class="fa-solid fa-circle-question"></i> Help & FAQ</h2>
+      <ul class="faq-list">
+        <li>
+          <span class="faq-q"><i class="fa-solid fa-circle-question"></i> How do I book an appointment?</span>
+          <span class="faq-a">Go to the "Get Started" or "Contact" page and fill out the appointment form, or call our emergency number for urgent care.</span>
+        </li>
+        <li>
+          <span class="faq-q"><i class="fa-solid fa-circle-question"></i> Can I access my medical records online?</span>
+          <span class="faq-a">Yes, registered users can access their records through the Patient Portal after logging in.</span>
+        </li>
+        <li>
+          <span class="faq-q"><i class="fa-solid fa-circle-question"></i> What should I do in an emergency?</span>
+          <span class="faq-a">Call our emergency number immediately: <a href="tel:+254743856988">+254743856988</a>. Our team is available 24/7.</span>
+        </li>
+        <li>
+          <span class="faq-q"><i class="fa-solid fa-circle-question"></i> How do I reset my password?</span>
+          <span class="faq-a">Click "Forgot Password" on the login page and follow the instructions to reset your password.</span>
+        </li>
+        <li>
+          <span class="faq-q"><i class="fa-solid fa-circle-question"></i> Who can I contact for support?</span>
+          <span class="faq-a">You can email us at <a href="mailto:Sehathospital@gmail.com">Sehathospital@gmail.com</a> or use the contact form on the Contact page.</span>
+        </li>
+      </ul>
+      <div class="help-contact">
+        <p>Still need help? <a href={~p"/contact"}><i class="fa-solid fa-envelope"></i> Contact Us</a></p>
+      </div>
+      <a href={~p"/main"} class="home-link" style="display:inline-block;margin-top:1.5rem;padding:0.6rem 1.4rem;background:#005b96;color:#fff;border-radius:6px;font-weight:600;text-decoration:none;box-shadow:0 2px 8px rgba(0,91,150,0.08);transition:background 0.2s;">
+        <i class="fa-solid fa-house" style="margin-right:0.5rem;"></i>Home
+      </a>
+    </div>
+  </div>
+</body>
+</html>

@@ -19,6 +19,19 @@ defmodule MyWebsiteWeb.Router do
 
     get "/home", PageController, :home
     get "/main", PageController, :main
+    get "/about", PageController, :about
+    get "/services", PageController, :services
+    get "/contact", PageController, :contact
+    get "/login", PageController, :login
+    get"/get",PageController , :get
+    get "/signup", PageController, :signup
+    get "/profile", PageController, :profile
+    get "/settings", PageController, :settings
+    get "/logout", PageController, :logout
+    get "/help", PageController, :help
+    get "/forgot-password", PageController, :forgot_password
+    get "/blog", PageController, :blog
+
   end
 
   # Other scopes may use custom stacks.

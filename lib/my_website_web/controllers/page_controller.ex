@@ -1,7 +1,15 @@
 defmodule MyWebsiteWeb.PageController do
   use MyWebsiteWeb, :controller
-
+def search(conn, %{"query" => query}) do
+  # Dummy results for demonstration
+  results = [
+    %{title: "Sample Result 1", description: "This matches your search: #{query}"},
+    %{title: "Sample Result 2", description: "Another result for: #{query}"}
+  ]
+  render(conn, :search, results: results, query: query)
+end
   def blog(conn, _params), do: render(conn, :blog, layout: false)
+  def team(conn, _params), do: render(conn, :team, layout: false)
   def home(conn, _params), do: render(conn, :home, layout: false)
   def forgot_password(conn, _params), do: render(conn, :forgot_password, layout: false)
   def main(conn, _params), do: render(conn, :main, layout: false)

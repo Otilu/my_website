@@ -31,6 +31,8 @@ defmodule MyWebsiteWeb.Router do
     get "/help", PageController, :help
     get "/forgot-password", PageController, :forgot_password
     get "/blog", PageController, :blog
+    get "/team", PageController, :team
+    get "/search", PageController, :search
 
   end
 

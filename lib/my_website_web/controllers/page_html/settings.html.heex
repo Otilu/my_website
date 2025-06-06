@@ -6,7 +6,7 @@
   <title>Kakwara Hospital Admin Settings</title>
   <style>
     :root {
-      --primary: #2563eb;
+      --primary: rgb(26, 123, 168);
       --dark: #1e293b;
       --light: #f1f5f9;
       --text: #0f172a;
@@ -21,7 +21,8 @@
 
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 
+      'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       background: var(--light);
       color: var(--text);
       display: flex;
@@ -178,11 +179,27 @@
   <aside class="sidebar">
     <h2>⚙️ Kakwara Admin</h2>
     <nav>
+      <a href={~p"/main"} 
+   style="
+      display: inline-block;
+      margin-bottom: rem;
+      background: transparent;
+      color: #fff;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: background 0.2s;
+   ">
+   <i class="fa-solid fa-house"></i> Home
+</a>
       <a href="#">Dashboard</a>
       <a href="#">Hospital Info</a>
       <a href="#">Users</a>
       <a href="#">Departments</a>
       <a href="#">Billing</a>
+   
     </nav>
   </aside>
 

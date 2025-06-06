@@ -5,6 +5,7 @@
     <link rel="stylesheet" href={~p"/assets/main.css"}>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <title>Kakwara Hospital</title>
   </head>
   <body>
       <!-- Hidden checkbox to control sidebar state -->
@@ -58,28 +59,34 @@
 
       <ul><a href={~p"/home"}><i class="fa-solid fa-house"></i> Home</a></ul>
       <ul><a href={~p"/about"}><i class="fa-solid fa-circle-info"></i> About Us</a></ul>
+      <ul><a href={~p"/contact"}><i class="fa-solid fa-envelope"></i> Contact</a></ul>
       <ul><a href={~p"/services"}><i class="fa-solid fa-briefcase-medical"></i> Services</a></ul>
       <ul><a href={~p"/blog"}><i class="fa-solid fa-blog"></i> Blog</a></ul>
-      <ul><a href={~p"/login"}><i class="fa-solid fa-users"></i> Team</a></ul>
+      <ul><a href={~p"/team"}><i class="fa-solid fa-users"></i> Team</a></ul>
       <ul><a href={~p"/signup"}><i class="fa-solid fa-user-plus"></i> Get Started</a></ul>
-      <ul><a href={~p"/login"}><i class="fa-solid fa-right-to-bracket sidebar-icon"></i> Log In</a></ul>
+      <ul><a href={~p"/login"}><i class="fa-solid fa-right-to-bracket "></i> Log In</a></ul>
       <!-- Search bar on far right -->
-      <form class="search-form" action="#" method="get">
-        <input type="text" class="search-input" placeholder="Search..." name="q" />
-        <!-- Optional search button:
-        <button class="search-btn" title="Search" type="submit">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-        -->
-      </form>
+       <form class="search-container" action={~p"/search"} method="get">
+  <input type="text" name="query" class="search-input" placeholder="Search..." required />
+  <button type="submit" class="search-btn">
+    <i class="fas fa-search"></i>
+  </button>
+</form>
     </div>
     <div class="make">
-      <title>Services</title>
-      <div class="banner">
-        <h2>Services</h2>
-        <p>Dedicated to providing compassionate,<br>high-quality healthcare.</p>
-        <div class="circle-deco"></div>
-        <div class="circle"></div>
+      <div class="need">
+         <div class="banner" onclick="window.location.href='services.html'">
+    <h2>Our Healthcare Services</h2>
+    <p>Compassionate, comprehensive care delivered by our team of specialists using cutting-edge medical technology.</p>
+    <a href="services.html" class="cta">
+      Explore Services
+      <i class="fas fa-arrow-right"></i>
+    </a>
+    <div class="circle-deco"></div>
+    <div class="medical-icon">
+      <i class="fas fa-heartbeat"></i>
+    </div>
+  </div>
       </div>
       <div class="image1">
         <img src={~p"/assets/image2.jpg"} alt="Image 1" width="25%">
@@ -310,5 +317,23 @@
     document.querySelector('.loading-spinner').style.display = 'none';
   });
 </script>
+  <script>
+    const btn = document.querySelector('.search-btn');
+    const container = document.querySelector('.search-container');
+    const input = document.querySelector('.search-input');
+
+    btn.addEventListener('click', () => {
+      container.classList.toggle('active');
+      if (container.classList.contains('active')) {
+        input.focus();
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!container.contains(e.target)) {
+        container.classList.remove('active');
+      }
+    });
+  </script>
   </body>
 </html>

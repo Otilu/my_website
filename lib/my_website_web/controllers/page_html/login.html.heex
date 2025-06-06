@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #005f73;
-            --secondary: #0a9396;
+            --primary: #0078D4;
+            --secondary: #0078D4;
             --accent: #ee9b00;
             --error: #bb3e03;
             --light: #e9d8a6;
@@ -19,11 +22,11 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
         
         body {
-            background: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center fixed;
+            background:transparent;
             background-size: cover;
             display: flex;
             justify-content: center;
@@ -410,6 +413,22 @@
                 <li><i class="fas fa-history"></i> Access Your Medical History</li>
                 <li><i class="fas fa-calendar-check"></i> Schedule Appointments Online</li>
                 <li><i class="fas fa-comments"></i> Secure Messaging with Providers</li>
+                <a href={~p"/main"} 
+   style="
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      background: transparent;
+      background-color: var(--primary);
+      color: #fff;
+      padding: 0.6rem 1.3rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: background 0.2s;
+   ">
+   <i class="fa-solid fa-house"></i> Home
+</a>
             </ul>
         </div>
         <div class="right-panel">
@@ -445,7 +464,7 @@
                         <input type="checkbox" id="remember">
                         <label for="remember">Remember me</label>
                     </div>
-                    <a href="#" class="forgot-password">Forgot password?</a>
+                   <a href= {~p"/forgot-password"} class="forgot-password">Forgot password?</a>
                 </div>
                 
                 <button class="btn btn-primary" id="signin-btn">Sign In</button>

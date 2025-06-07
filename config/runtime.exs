@@ -110,4 +110,6 @@ if config_env() == :prod do
   #     config :swoosh, :api_client, Swoosh.ApiClient.Hackney
   #
   # See https://hexdocs.pm/swoosh/Swoosh.html#module-installation for details.
+  port = String.to_integer(System.get_env("PORT") || "4000")
+config :my_website, MyWebsiteWeb.Endpoint, http: [ip: {0, 0, 0, 0}, port: port]
 end

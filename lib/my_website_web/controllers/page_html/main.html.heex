@@ -17,6 +17,14 @@
       <i class="fas fa-bars menu-icon"></i>
     </label>
     <h1>Kakwara Hospital</h1>
+  <button id="theme-toggle" class="theme-toggle-btn">
+  <i class="fas fa-moon"></i>
+</button>
+<select id="lang-select" class="lang-select">
+  <option value="en">English</option>
+  <option value="fr">Français</option>
+  <option value="sw">Swahili</option>
+</select>
   </div>
 
   <!-- Sidebar -->
@@ -35,8 +43,8 @@
     <!-- More items... -->
   </div>
 
-  <!-- Overlay (click to close) -->
-  <label for="sidebar-toggle" class="overlay"></label>
+  <!-- Overlay (click to close) <a href={~p"/signup"}><i class="fa-solid fa-user-plus"></i> Get Started</a><a href={~p"/signup"}><i class="fa-solid fa-user-plus"></i> Get Started</a>
+  <label for="sidebar-toggle" class="overlay"></label> -->
 
   <!-- Main content -->
   <div class="content">
@@ -57,7 +65,7 @@
   
       
 
-      <ul><a href={~p"/home"}><i class="fa-solid fa-house"></i> Home</a></ul>
+      <ul><a href={~p"/main"}><i class="fa-solid fa-house"></i> Home</a></ul>
       <ul><a href={~p"/about"}><i class="fa-solid fa-circle-info"></i> About Us</a></ul>
       <ul><a href={~p"/contact"}><i class="fa-solid fa-envelope"></i> Contact</a></ul>
       <ul><a href={~p"/services"}><i class="fa-solid fa-briefcase-medical"></i> Services</a></ul>
@@ -78,8 +86,8 @@
          <div class="banner" onclick="window.location.href='services.html'">
     <h2>Our Healthcare Services</h2>
     <p>Compassionate, comprehensive care delivered by our team of specialists using cutting-edge medical technology.</p>
-    <a href="services.html" class="cta">
-      Explore Services
+    <a href={~p"/services"} class="cta">
+      More Services
       <i class="fas fa-arrow-right"></i>
     </a>
     <div class="circle-deco"></div>
@@ -110,7 +118,11 @@
             <p>
               Our highly trained medical team is always ready to respond quickly and efficiently to any emergency situation, ensuring you receive the best possible care when you need it most.
             </p>
-          </div>
+               <a href={~p"/contact"} class="cta">
+  Call Us Now
+  <i class="fas fa-arrow-right"></i>
+</a>
+              </div>
         </div>
       </div>
       <section class="root">
@@ -161,7 +173,7 @@
               <p>Connecting with clients worldwide. Expanding our services to meet global demands.</p>
             </div>
           </div>
-          <button class="cta-button">Get Started</button>
+          <button class="cta-button"><a href={~p"/signup"}><i class="fa-solid fa-user-plus"></i> Get Started</a></button>
         </div>
       </section>
     </div>
@@ -179,6 +191,7 @@
         <p class="info-bottom-text">Ensuring Wellness with Excellence, Compassion and Innovation</p>
       </div>
       <div class="services-container">
+        <div class="info-bot">
         <div class="services-gridy">
           <div class="service-card">
             <div class="service-icon">
@@ -223,6 +236,7 @@
             <p>Connecting with clients worldwide. Expanding our services to meet global demands.</p>
           </div>
         </div>
+      </div>
       </div>
     </div>
 
@@ -335,5 +349,37 @@
       }
     });
   </script>
+  <script>
+  const themeToggle = document.getElementById('theme-toggle');
+  const icon = themeToggle.querySelector('i');
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    // Toggle icon
+    if(document.body.classList.contains('dark-mode')) {
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+    } else {
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon');
+    }
+    // Optional: Save preference
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+  });
+
+  // On load, set theme from localStorage
+  window.addEventListener('DOMContentLoaded', () => {
+    if(localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+    }
+  });
+</script>
+<script>
+  document.getElementById('lang-select').addEventListener('change', function() {
+    alert('Language changed to: ' + this.value);
+    // You can add logic here to actually change the language
+  });
+</script>
   </body>
 </html>

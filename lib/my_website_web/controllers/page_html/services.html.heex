@@ -87,7 +87,7 @@
         .logo h1 {
             color: var(--primary);
             font-size: 1.8rem;
-            font-weight: 700;
+            font-weight: 1900px;
         }
 
         .nav-links {
@@ -454,15 +454,15 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="https://i.imgur.com/JZEyH7m.png" alt="Kakwara Hospital Logo">
+                <!--<img src="https://i.imgur.com/JZEyH7m.png" alt="Kakwara Hospital Logo">-->
                 <h1>Kakwara Hospital</h1>
             </div>
             <div class="nav-links">
-                <a href={~p"/main"} >Home</a>
-                <a href="#" class="active">Services</a>
-                <a href="#">Doctors</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
+                <a href={~p"/main"} ><i class="fa-solid fa-home"></i>Home</a>
+                <a href={~p"/services"}><i class="fa-solid fa-briefcase-medical"></i> Services</a>
+                <a href={~p"/team"}><i class="fa-solid fa-users"></i> Doctors</a>
+                <a href={~p"/about"}><i class="fa-solid fa-circle-info"></i> About Us</a>
+                <a href={~p"/contact"}><i class="fa-solid fa-envelope"></i> Contact</a>
             </div>
         </div>
     </nav>
